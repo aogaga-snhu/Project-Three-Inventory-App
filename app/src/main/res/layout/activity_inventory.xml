@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/light">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Inventory" android:textSize="28sp" android:textStyle="bold" android:textColor="@color/navy"/>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Track stock levels and manage items" android:textColor="@color/muted" android:layout_marginBottom="18dp"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/panel">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Inventory Item" android:textStyle="bold" android:textSize="18sp"/>
+<EditText android:id="@+id/itemNameText" android:layout_width="match_parent" android:layout_height="52dp" android:hint="Item name" android:inputType="textCapWords"/>
+<EditText android:id="@+id/itemQuantityText" android:layout_width="match_parent" android:layout_height="52dp" android:hint="Quantity" android:inputType="number"/>
+<Button android:id="@+id/buttonAddItem" android:layout_width="match_parent" android:layout_height="50dp" android:text="ADD ITEM" android:textColor="@color/white" android:background="@drawable/button_primary" android:layout_marginTop="8dp"/>
+</LinearLayout>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Current Inventory" android:textStyle="bold" android:textSize="20sp" android:textColor="@color/text" android:layout_marginTop="22dp" android:layout_marginBottom="8dp"/>
+<TableLayout android:id="@+id/inventoryGrid" android:layout_width="match_parent" android:layout_height="wrap_content" android:stretchColumns="0" android:shrinkColumns="0" android:background="@color/white">
+<TableRow android:background="@color/navy" android:padding="8dp"><TextView android:text="ITEM" android:textStyle="bold" android:textColor="@color/white" android:padding="6dp"/><TextView android:text="QTY" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:padding="6dp"/><TextView android:text="EDIT / DELETE" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:padding="6dp"/></TableRow>
+
+
+
+</TableLayout>
+<Button android:id="@+id/buttonNotificationSettings" android:layout_width="match_parent" android:layout_height="52dp" android:text="SMS NOTIFICATION SETTINGS" android:layout_marginTop="22dp"/>
+</LinearLayout></ScrollView>

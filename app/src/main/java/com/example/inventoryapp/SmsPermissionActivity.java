@@ -1,0 +1,8 @@
+package com.example.inventoryapp;
+import android.app.*;import android.os.*;import android.Manifest;import android.content.pm.PackageManager;import android.widget.*;
+public class SmsPermissionActivity extends Activity{
+ private TextView status;private EditText phone;
+ @Override public void onCreate(Bundle b){super.onCreate(b);setContentView(R.layout.activity_sms_permission);status=findViewById(R.id.textPermissionStatus);phone=findViewById(R.id.editAlertPhone);phone.setText(getSharedPreferences("sms",0).getString("phone",""));findViewById(R.id.buttonSavePhone).setOnClickListener(v->{String p=phone.getText().toString().trim();if(!p.matches("\\+?[0-9]{7,15}")){Toast.makeText(this,"Enter valid phone number",Toast.LENGTH_LONG).show();return;}getSharedPreferences("sms",0).edit().putString("phone",p).apply();Toast.makeText(this,"Phone saved",Toast.LENGTH_SHORT).show();});findViewById(R.id.buttonAllowSms).setOnClickListener(v->{if(checkSelfPermission(Manifest.permission.SEND_SMS)!=PackageManager.PERMISSION_GRANTED)requestPermissions(new String[]{Manifest.permission.SEND_SMS},1001);else refresh();});findViewById(R.id.buttonDeclineSms).setOnClickListener(v->status.setText("SMS is optional. To revoke previously granted access, use Android Settings."));findViewById(R.id.buttonContinueInventory).setOnClickListener(v->finish());refresh();}
+ private void refresh(){status.setText(checkSelfPermission(Manifest.permission.SEND_SMS)==PackageManager.PERMISSION_GRANTED?"SMS enabled. Save a recipient phone number.":"SMS not enabled. Inventory features remain available.");}
+ @Override public void onRequestPermissionsResult(int r,String[] p,int[] g){super.onRequestPermissionsResult(r,p,g);if(r==1001)refresh();}
+}

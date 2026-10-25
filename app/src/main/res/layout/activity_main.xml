@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/light" android:fillViewport="true">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="28dp" android:gravity="center_horizontal">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Inventory App" android:textStyle="bold" android:textSize="30sp" android:textColor="@color/navy" android:layout_marginTop="50dp"/>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Secure warehouse inventory access" android:textSize="15sp" android:textColor="@color/muted" android:layout_marginBottom="28dp"/>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/panel">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Log In" android:textStyle="bold" android:textSize="22sp" android:textColor="@color/text" android:layout_marginBottom="16dp"/>
+<EditText android:id="@+id/usernameText" android:layout_width="match_parent" android:layout_height="56dp" android:hint="Username" android:inputType="text" android:autofillHints="username" android:nextFocusDown="@id/passwordText"/>
+<EditText android:id="@+id/passwordText" android:layout_width="match_parent" android:layout_height="56dp" android:hint="Password" android:inputType="textPassword" android:autofillHints="password" android:nextFocusDown="@id/buttonLogin"/>
+<Button android:id="@+id/buttonLogin" android:layout_width="match_parent" android:layout_height="52dp" android:text="LOG IN" android:textColor="@color/white" android:background="@drawable/button_primary" android:layout_marginTop="18dp"/>
+<Button android:id="@+id/buttonCreateAccount" android:layout_width="match_parent" android:layout_height="52dp" android:text="CREATE NEW ACCOUNT" android:layout_marginTop="10dp"/>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="First time here? Enter a username and password, then choose Create New Account." android:textColor="@color/muted" android:textSize="13sp" android:layout_marginTop="12dp"/>
+</LinearLayout></LinearLayout></ScrollView>
