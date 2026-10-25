@@ -2,7 +2,7 @@
 
 ## Inventory App — Project Three Portfolio Artifact
 
-This repository contains my completed Inventory App project for CS 360. The Project Three ZIP includes the Android application code and the user interface developed during Project Two. The app launch plan may also be included as supporting documentation.
+This repository contains my completed Inventory App project for CS 360. The Android Studio project is committed directly to this repository as source files and directories, rather than packaged in a ZIP archive. The application builds on the user interface developed during Project Two.
 
 ### App requirements, goals, and user needs
 
@@ -30,8 +30,12 @@ The inventory management and SQLite persistence functionality best demonstrate w
 
 ### Portfolio files
 
-- `Ogaga_Inventory_App_Project_Three.zip` — Android Studio project source and completed UI design.
-- App launch plan (optional supporting document).
+- `app/` — Android application source code, resources, and manifest.
+- `gradle/wrapper/`, `gradlew`, and `gradlew.bat` — Gradle wrapper files.
+- `build.gradle` and `settings.gradle` — Project build configuration.
+- `README.md` — Project description and CS 360 portfolio reflection.
+
+The source code is available directly in the repository; a separate ZIP archive is not included.
 
 ### AI acknowledgment
 
